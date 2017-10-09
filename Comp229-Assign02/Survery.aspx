@@ -1,5 +1,4 @@
-﻿<%@ Page Title="Survery" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Survery.aspx.cs" Inherits="Comp229_Assign02.Contact" %>
-<html>
+<%@ Page Title="Survery" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Survery.aspx.cs" Inherits="Comp229_Assign02.Contact" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
     <form method="post" action="ThankYou.aspx">
@@ -28,9 +27,8 @@
 
 <br /><p>Can you send your email: </p>
     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-    <asp:Button ID="submit" runat="server" OnClick="ServerSubmit_Click" />
+    <asp:Button ID="submit" runat="server" postbackurl="~/ThankYou.aspx" Text="Submit" />
     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="comment" Display="Dynamic" runat="server" 
         ErrorMessage="Comment missing"></asp:RequiredFieldValidator>    
         </form>
 </asp:Content>
-</html>
